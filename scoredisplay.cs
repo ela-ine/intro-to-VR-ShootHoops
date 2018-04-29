@@ -3,20 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class display : MonoBehaviour {
+public class scoredisplay : MonoBehaviour {
 
 	Text scoretext;
-	andscore andscore;
+	scorekeeper scorekeeper;
 
 
 	// Use this for initialization
 	void Start () {
 		scoretext = GetComponent<Text> ();
-		andscore = FindObjectOfType<andscore> ();
+		scorekeeper = FindObjectOfType<scorekeeper> ();
 	}
 
 	// Update is called once per frame
 	void Update () {
-		scoretext.text = "Score: " + andscore.score;
+		scorekeeper.text = "Score: " + scorekeeper.score;
 	}
 }
