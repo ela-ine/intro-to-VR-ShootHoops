@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class trigger : MonoBehaviour {
+public class ringboardtrigger2 : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -10,7 +10,7 @@ public class trigger : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider bam) {
-		ringboardspawner bottomtrigger = GetComponentInChildren<bottom> ();
+		ringboardtrigger bottomtrigger = GetComponentInChildren<ringboardtrigger> ();
 		bottomtrigger.Expectations (bam);
 		print("trigger 2 run");
 	}
