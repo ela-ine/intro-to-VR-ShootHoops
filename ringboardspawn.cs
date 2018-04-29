@@ -18,7 +18,7 @@ public class bottom : MonoBehaviour {
 		GameObject oldring = GameObject.Find("RingBoard");
 
 		if (other == expected) {
-			andscore score = FindObjectOfType<andscore> ();
+			scorekeeper score = FindObjectOfType<scorekeeper> ();
 			score.IncrementScore(2);
 			print ("trigger 2 run");
 
