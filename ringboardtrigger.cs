@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class bottom : MonoBehaviour {
+public class ringboardtrigger : MonoBehaviour {
 
 	public GameObject ringPrefab;
 	Collider expected;
