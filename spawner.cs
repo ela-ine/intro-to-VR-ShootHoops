@@ -11,31 +11,22 @@ public class spawner : MonoBehaviour {
 	}
 
 	Rigidbody createBall () {
-		GameObject instance = Instantiate (ballPrefab);
-		Rigidbody rb = instance.GetComponent<Rigidbody> ();
+		GameObject instance = Instantiate (ballPrefab); 
+		Rigidbody rb = instance.GetComponent<Rigidbody> (); 
 		return rb;
 	}
 
 	// Update is called once per frame
 	void Update () {
+		GameObject ballinst;
+
 		if (Input.GetKeyDown (KeyCode.UpArrow)) {
-			Rigidbody rb = createBall();
-			rb.velocity = Vector3.forward * 5.0f;
+			ballinst = Instantiate (ballPrefab); 
+			ballinst.transform.position = transform.position + new Vector3 (0, 3, 0);
+			Rigidbody rb = ballinst.GetComponent<Rigidbody> (); 
+			Camera camera = GetComponentInChildren<Camera> ();
+			rb.velocity = camera.transform.rotation * Vector3.forward * 9.0f;
 		}
 
-		if (Input.GetKeyDown (KeyCode.LeftArrow)) {
-			Rigidbody rb = createBall();
-			rb.velocity = Vector3.left * 5.0f;
-		}
-
-		if (Input.GetKeyDown (KeyCode.DownArrow)) {
-			Rigidbody rb = createBall();
-			rb.velocity = Vector3.back * 5.0f;
-		}
-
-		if (Input.GetKeyDown (KeyCode.RightArrow)) {
-			Rigidbody rb = createBall();
-			rb.velocity = Vector3.right * 5.0f;
-		}
 	}
 }
