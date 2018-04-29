@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class andscore : MonoBehaviour {
+public class scorekeeper : MonoBehaviour {
 
 	public int score = 0;
 
