@@ -1,1 +1,1 @@
-# intro-to-virtual-reality
+# intro-to-VR:basketball-game
