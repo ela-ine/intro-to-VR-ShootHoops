@@ -10,7 +10,7 @@ public class trigger : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider bam) {
-		bottom bottomtrigger = GetComponentInChildren<bottom> ();
+		ringboardspawner bottomtrigger = GetComponentInChildren<bottom> ();
 		bottomtrigger.Expectations (bam);
 		print("trigger 2 run");
 	}
